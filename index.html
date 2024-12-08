@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>would you marry me?</title>
+  
+</head>
+<body>
+    <img src="bg.jpg" alt="bg" class="bg">
+    <main class="container">
+        <img src="zelda.png" alt="zelda" class="zelda_img">
+        <h1>Would you marry me?</h1>
+        <p>i love you so much 💓</p>
+        <div class="buttons">
+            <button class="options" id="yes">Yes, i love u</button>
+            <button class="options" id="no">No</button>
+        </div>
+    </main>
+
+    <script>
+        const no = document.getElementById('no');
+        
+        // on hover to no
+        no.addEventListener('mouseover', () => {
+            console.log('no');
+            const top = Math.random() * 90;
+            const left = Math.random() * 90;
+            no.style.position = 'absolute';
+            no.style.top = `${top}%`;
+            no.style.left = `${left}%`;
+        });
+
+        // on click to yes
+        const yes = document.getElementById('yes');
+        yes.addEventListener('click', () => {
+            // redirect to another page
+            window.location.href = 'love.html';
+        });
+    </script>
+</body>
+</html>
